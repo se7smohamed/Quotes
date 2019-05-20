@@ -1,7 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const config = require('./config')
-const db = `mongodb+srv://${config['user']}:${config['pass']}@thought-v8dje.mongodb.net/test?retryWrites=true`
+const connString = require('./config')
 
 const quote = require('./routes/api/routes')
 
@@ -9,8 +8,9 @@ const app = express()
 app.use(express.json())
 
 
+// connection string to db
 mongoose
-    .connect(db, { useNewUrlParser: true })
+    .connect(connString, { useNewUrlParser: true })
     .then()
     .catch( e => console.log(`Error connecting to db: ${e}`))
 
