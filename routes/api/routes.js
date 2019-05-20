@@ -1,16 +1,6 @@
 const router = require('express').Router()
 const Quote = require('../../models/Quote')
 
-
-//delete everything
-
-router.get('/del', (req, res)=>{
-    Quote.deleteMany({}, ()=>{
-        res.send('deleted all')
-        console.log('del all')
-    })
-})
-
 //get random quote
 router.get('/', (req, res)=>{
     Quote.countDocuments().then( count => { 

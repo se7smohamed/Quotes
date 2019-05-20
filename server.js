@@ -8,7 +8,6 @@ const quote = require('./routes/api/routes')
 const app = express()
 app.use(express.json())
 
-app.get('/', (req, res) => res.end('get /////'))
 
 mongoose
     .connect(db, { useNewUrlParser: true })
