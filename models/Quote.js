@@ -1,13 +1,13 @@
 const mongoose = require('mongoose')
 
-const thoughtSchema = new mongoose.Schema({
+const QuoteSchema = new mongoose.Schema({
     quote: {
         type: String,
         required: true
     },
     by: {
         type: String,
-        default: 'guest'
+        default: 'unknown'
     },
     date: {
         type: Date,
@@ -15,4 +15,4 @@ const thoughtSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('thought', thoughtSchema)
+module.exports = mongoose.model('quote', QuoteSchema)

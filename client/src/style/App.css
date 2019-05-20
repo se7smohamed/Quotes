@@ -25,3 +25,7 @@ blockquote{
     font-style: italic;
     color: #777;
 }
+.navbar{
+    background: #fff0;
+}
+.jumbotron{background: unset}
