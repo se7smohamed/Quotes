@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/netlify-lambda serve ./",
-    "build": "./node_modules/.bin/netlify-lambda build ./",
+    "start": "./node_modules/.bin/netlify-lambda serve /src",
+    "build": "./node_modules/.bin/netlify-lambda build /src",
     "server": "nodemon server.js",
     "both": "concurrently \"nodemon server_dev.js\" \"cd client && npm start\""
   },
