@@ -1,6 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const connString = require('./config')
+const connString = process.env.connString || require('./config')
 
 
 const quote = require('./routes/api/routes')
