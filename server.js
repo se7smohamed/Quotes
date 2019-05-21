@@ -20,4 +20,4 @@ mongoose
 
 
 app.use('/api/quote/', quote)
-module.exports = serverless(app)
+module.exports.handler = serverless(app)
