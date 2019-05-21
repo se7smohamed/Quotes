@@ -19,5 +19,5 @@ mongoose
     .catch( e => console.log(`Error connecting to db: ${e}`))
 
 
-app.use('/.netlify/functions/api/quote/', quote)
+app.use('/api/quote/', quote)
 module.exports.handler = serverless(app)
