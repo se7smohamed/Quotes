@@ -30,6 +30,10 @@ class SendQuote extends React.Component {
             console.log( this.state.quote.length )
             this.setState({errorMsg: 'Quotes have to be at least 10 characters.'})
             return false
+        }else if(this.state.quote.length >= 200){
+            console.log( this.state.quote.length )
+            this.setState({errorMsg: 'Quotes cann\'t be longer than 200 characters.'})
+            return false
         }else{
             this.setState({errorMsg: false})
             return true
@@ -67,12 +71,12 @@ class SendQuote extends React.Component {
     render(){
         return( 
             <div className="jumbotron mt-sm-5">
-                <form className='container' onSubmit={e=>this.formSubmit(e)}>
-                    { this.state.errorMsg? <Alert type='danger' msg={this.state.errorMsg} />: null }
-                    { this.state.succMsg? <>
+                <form className='container send-form' onSubmit={e=>this.formSubmit(e)}>
+                    { this.state.errorMsg ? <Alert type='danger' msg={this.state.errorMsg} />: null }
+                    { this.state.succMsg ? <>
                         <Alert type='success' msg={this.state.succMsg}/>
                         <Redirect to={`quote/${this.state.sentQuote._id}`}/> 
-                    </>: null }
+                    </> : null }
                     <textarea type='text' id='quote' placeholder='Quote' className="form-control" onInput={ this.formInput }/>
                     <input type='text' id='by' placeholder='By' className="form-control" onInput={ this.formInput }/>
                     <input type='submit' className="form-control btn btn-primary"/>

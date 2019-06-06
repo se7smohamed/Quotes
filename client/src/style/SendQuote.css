@@ -19,9 +19,18 @@
     
     padding: 0px;
     margin: 0px;
-  }
+}
+.send-form{
+    padding: 1em 6em !important;
+}
+
+@media screen and (max-width: 600px){
+    .send-form{
+        padding: 1em !important;
+    }
+}
 .form-control{
-    margin: 1em;
+    margin: 1em 0em;
 }
 body{
     height: 100vh !important;

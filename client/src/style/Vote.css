@@ -1,0 +1,24 @@
+.vote-el{
+    display: block;
+    text-align: center;
+
+    /* opacity: .; */
+}
+.vote-div{
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    padding-left: 1em;
+    transform: translate(50%, -70%)
+
+}
+.vote-count{
+    padding: 12px 0;
+    opacity: .9;
+}
+.vote-btn{
+    opacity: .6;
+    cursor: pointer;
+}
+/* .upvote{}
+.downvote{} */

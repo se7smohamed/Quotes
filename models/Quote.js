@@ -9,6 +9,10 @@ const QuoteSchema = new mongoose.Schema({
         type: String,
         default: 'unknown'
     },
+    votes: {
+        type: Number,
+        default: 0
+    },
     date: {
         type: Date,
         default: Date.now
