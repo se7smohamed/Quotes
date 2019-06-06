@@ -1,11 +1,12 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
-// use your own mongodb connection string
+
 let mongURI
 if (process.env.NODE_ENV === 'production' ){
     mongURI = process.env.mongURI //'mongodb://127.0.0.1:27017/kkk'
 }else{
+    // use your own mongodb connection string
     mongURI = 'mongodb://127.0.0.1:27017/kuot'
 }
 const quote = require('./routes/api/routes')
