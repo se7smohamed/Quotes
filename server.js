@@ -4,7 +4,7 @@ const path = require('path')
 
 let mongURI
 if (process.env.NODE_ENV === 'production' ){
-    mongURI = process.env.mongURI //'mongodb://127.0.0.1:27017/kkk'
+    mongURI = process.env.mongURI
 }else{
     mongURI = 'mongodb://127.0.0.1:27017/kuot'
 }
