@@ -7,7 +7,7 @@ const Empty = () => (
 )
 
 const Quote = props => {
-    // console.log('Quote votes -->', props.votes)
+    // console.log('Quote votes -->', props.votes) 
     return(
     <div>
         <figure className="quote">
