@@ -3,7 +3,8 @@ import '../style/SendQuote.css'
 import  { Redirect } from 'react-router-dom'
 
 const Alert = props=>(
-    <div className={`alert alert-${props.type}`} style={{margin: '1em', width: '100%'}} role="alert">
+    // margin: '1em',
+    <div className={`alert alert-${props.type}`} style={{ width: '100%'}} role="alert">
         {props.msg}
     </div> 
 )
