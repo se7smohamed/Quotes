@@ -6,7 +6,7 @@ let connString
 if (process.env.NODE_ENV === 'production' ){
     connString = process.env.connString //'mongodb://127.0.0.1:27017/kkk'
 }else{
-    connString = 'mongodb://127.0.0.1:27017/kuote'
+    connString = 'mongodb://127.0.0.1:27017/kuot'
 }
 const quote = require('./routes/api/routes')
 const app = express()
@@ -21,10 +21,6 @@ mongoose
 
 app.use('/api/quote/', quote)
 const PORT = process.env.PORT || 5000
-
-app.get('/', (req, res) => {
-    res.send( require("os").hostname() )
-})
 
 if (process.env.NODE_ENV === 'production'){
     app.use( express.static('client/build') )
