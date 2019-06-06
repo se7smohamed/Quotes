@@ -1,8 +1,10 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
+try{ let confString = require('./config') }
+catch(e) {}
 // use your own mongodb connection string
-const connString =  process.env.MONGOLAB_URI || require('./config')
+const connString =  process.env.MONGOLAB_URI || connString
 
 const quote = require('./routes/api/routes')
 const app = express()
