@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
 // use your own mongodb connection string
-const connString = process.env.MONGOLAB_URI //'mongodb://127.0.0.1:27017/kkk'
+const connString = process.env.connString //'mongodb://127.0.0.1:27017/kkk'
 const quote = require('./routes/api/routes')
 const app = express()
 app.use(express.json())
