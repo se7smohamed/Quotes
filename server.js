@@ -2,11 +2,11 @@ const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
 
-let mongURI
+let mongoURI
 if (process.env.NODE_ENV === 'production' ){
-    mongURI = process.env.mongURI
+    mongoURI = process.env.connString
 }else{
-    mongURI = 'mongodb://127.0.0.1:27017/kuot'
+    mongoURI = 'mongodb://127.0.0.1:27017/kuot'
 }
 const quote = require('./routes/api/routes')
 const app = express()
@@ -15,7 +15,7 @@ app.use(express.json())
 
 // connection string to db
 mongoose
-    .connect(mongURI, { useNewUrlParser: true })
+    .connect(mongoURI, { useNewUrlParser: true })
     .catch( e => console.log(`Error connecting to db: ${e}`))
 
 
